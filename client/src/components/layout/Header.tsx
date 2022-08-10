@@ -1,15 +1,19 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography, styled } from "@mui/material";
 
 const Header = () => {
   return (
-    <AppBar position="relative">
+    <HeaderAppBar position="relative">
       <Toolbar>
         <Typography variant="h6" color="inherit" noWrap>
           TODOLIST
         </Typography>
       </Toolbar>
-    </AppBar>
+    </HeaderAppBar>
   );
 };
 
 export default Header;
+
+const HeaderAppBar = styled(AppBar)(({ theme }) => ({
+  background: theme.palette.primary.main,
+}));

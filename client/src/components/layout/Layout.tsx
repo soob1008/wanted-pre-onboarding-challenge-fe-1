@@ -1,4 +1,4 @@
-import { Container, Box } from "@mui/material";
+import { Container, Box, styled } from "@mui/material";
 import Header from "./Header";
 
 type LayoutTypes = {
@@ -9,9 +9,13 @@ const Layout = ({ children }: LayoutTypes) => {
   return (
     <Box>
       <Header />
-      <Container maxWidth="sm">{children}</Container>
+      <StyledWrap maxWidth="sm">{children}</StyledWrap>
     </Box>
   );
 };
 
 export default Layout;
+
+const StyledWrap = styled(Container)({
+  paddingTop: 60,
+});
