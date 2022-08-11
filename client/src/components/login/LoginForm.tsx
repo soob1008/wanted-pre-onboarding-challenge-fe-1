@@ -24,11 +24,12 @@ const LoginForm = () => {
   };
 
   const keyupHandler = () => {
-    if (!form.email) return false;
+    if (!form.email || !form.password) return false;
 
     if (
       form.email !== "" &&
       form.password !== "" &&
+      form.password.length >= 8 &&
       emailRegx.test(form.email)
     ) {
       setIsDisable(false);
@@ -39,6 +40,8 @@ const LoginForm = () => {
 
   const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    //
   };
 
   return (
