@@ -16,3 +16,10 @@ export const useGetTodo = () => {
     () => () => TodoAPI.get().then((response) => response.data)
   );
 };
+
+export const useGetTodoById = (id: string) => {
+  return useQuery(
+    ["todos"],
+    () => () => TodoAPI.getById(id).then((response) => response.data)
+  );
+};
