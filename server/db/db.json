@@ -1,4 +1,33 @@
 {
   "todos": [],
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "email": "test@naver.com",
+      "password": "12345",
+      "createdAt": "2022-08-15"
+    },
+    {},
+    {
+      "email": "1008sb@naver.com",
+      "password": "tnqls108",
+      "id": "Vbxbz_R5t59ZeJW5GHhyI",
+      "createdAt": "2022-08-15T06:43:39.682Z",
+      "updatedAt": "2022-08-15T06:43:39.682Z"
+    },
+    {
+      "email": "soob108@naver.com",
+      "password": "tnqls108",
+      "id": "cPnGPdtk6cWIzBz_bXKca",
+      "createdAt": "2022-08-15T06:48:10.401Z",
+      "updatedAt": "2022-08-15T06:48:10.401Z"
+    },
+    {
+      "email": "soob108@hanmail.net",
+      "password": "tnqls108",
+      "id": "tiK2_r2hkJqviI4kro1gN",
+      "createdAt": "2022-08-15T06:52:12.990Z",
+      "updatedAt": "2022-08-15T06:52:12.990Z"
+    }
+  ]
 }
