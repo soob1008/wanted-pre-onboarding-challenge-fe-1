@@ -1,7 +1,7 @@
 interface TodoTypes {
   title: string;
   content: string;
-  id?: string;
+  id: string;
   createdAt: Date;
   updatedAt: Date;
 }

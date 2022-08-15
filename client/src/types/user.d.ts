@@ -1,6 +1,6 @@
 interface UserTypes {
-  email: string | undefined;
-  password: string | undefined;
+  email: string;
+  password: string;
 }
 
 type UserList = UserProps[];

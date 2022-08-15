@@ -1,7 +1,6 @@
 import { Box, Typography, TextField, Button } from "@mui/material";
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { authLogin } from "../../api/httpRequest";
 import { UserTypes } from "../../types/user";
 
 const LoginForm = () => {
@@ -38,21 +37,21 @@ const LoginForm = () => {
     }
   };
 
-  const { mutate } = useMutation(authLogin, {
-    onSuccess: () => {
-      queryClient.invalidateQueries(["users"]);
-    },
-    onError: (e: any) => {
-      // 실패시 호출 (401, 404 같은 error가 아니라 정말 api 호출이 실패한 경우만 호출됩니다.)
-      // 강제로 에러 발생시키려면 api단에서 throw Error 날립니다. (참조: https://react-query.tanstack.com/guides/query-functions#usage-with-fetch-and-other-clients-that-do-not-throw-by-default)
-      console.log(e.message);
-    },
-  });
+  // const { mutate } = useMutation(authLogin, {
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries(["users"]);
+  //   },
+  //   onError: (e: any) => {
+  //     // 실패시 호출 (401, 404 같은 error가 아니라 정말 api 호출이 실패한 경우만 호출됩니다.)
+  //     // 강제로 에러 발생시키려면 api단에서 throw Error 날립니다. (참조: https://react-query.tanstack.com/guides/query-functions#usage-with-fetch-and-other-clients-that-do-not-throw-by-default)
+  //     console.log(e.message);
+  //   },
+  // });
 
   const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // login
-    mutate({ email: form.email, password: form.password });
+    // mutate({ email: form.email, password: form.password });
   };
 
   return (
